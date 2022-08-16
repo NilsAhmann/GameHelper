@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="GameHelper.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Sims3ModFolder" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Downloads</Value>
+    </Setting>
+    <Setting Name="Sims4ModFolder" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Mods</Value>
+    </Setting>
+    <Setting Name="Sims3BaseFolder" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">%DOCUMENTS%\Electronic Arts\Die Sims 3</Value>
+    </Setting>
+    <Setting Name="Sims4BaseFolder" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">%DOCUMENTS%\Electronic Arts\Die Sims 4</Value>
+    </Setting>
+    <Setting Name="DownloadFolder" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">%DOWNLOADS%</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
