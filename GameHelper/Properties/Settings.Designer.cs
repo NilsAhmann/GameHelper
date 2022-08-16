@@ -67,5 +67,23 @@ namespace GameHelper.Properties {
                 return ((string)(this["DownloadFolder"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute(".Sims3Pack")]
+        public string Sims3ModFileFilter {
+            get {
+                return ((string)(this["Sims3ModFileFilter"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute(".package")]
+        public string Sims4ModFileFilter {
+            get {
+                return ((string)(this["Sims4ModFileFilter"]));
+            }
+        }
     }
 }

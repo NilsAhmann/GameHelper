@@ -17,5 +17,11 @@
     <Setting Name="DownloadFolder" Type="System.String" Scope="Application">
       <Value Profile="(Default)">%DOWNLOADS%</Value>
     </Setting>
+    <Setting Name="Sims3ModFileFilter" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">.Sims3Pack</Value>
+    </Setting>
+    <Setting Name="Sims4ModFileFilter" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">.package</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

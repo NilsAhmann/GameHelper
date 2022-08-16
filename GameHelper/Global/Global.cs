@@ -9,8 +9,8 @@ namespace GameHelper.Global
 
         public static string ReWriteFoldersIfDefault(string folder)
         {
-            folder = folder.Replace(@"%DOCUMENTS%", Environment.SpecialFolder.MyDocuments.ToString());
-            folder = folder.Replace(@"%DOWNLOADS%", Path.Combine(Environment.SpecialFolder.UserProfile.ToString(), "Downloads"));
+            folder = folder.Replace(@"%DOCUMENTS%", Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
+            folder = folder.Replace(@"%DOWNLOADS%", Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "Downloads"));
 
             return folder;
         }

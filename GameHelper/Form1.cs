@@ -23,15 +23,15 @@ namespace GameHelper
 
             foreach(var sims in _simList)
             {
-                Action test = delegate () { sims.MoveModsToFolder(Global.Common.GetDownloadFolder); };
-                Process(test);
+                Action getDLFolder = delegate () { sims.MoveModsToFolder(Global.Common.GetDownloadFolder); };
+                Process(getDLFolder);
             }
         }
 
         private void Process(Action action)
         {
-            if (_backgroundWorker != null && _backgroundWorker.IsAlive)
-                _backgroundWorker.Abort();
+            //if (_backgroundWorker != null && _backgroundWorker.IsAlive)
+            //    _backgroundWorker.Abort();
 
             _backgroundWorker = new Thread(new ThreadStart(action));
             _backgroundWorker.IsBackground = true;

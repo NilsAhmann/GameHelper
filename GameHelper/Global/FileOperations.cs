@@ -9,12 +9,13 @@ namespace GameHelper.Global
     {
         public static List<FileInfo> GetFileNamesByFilter(string searchfolder, string wildcardFilter)
         {
+            DirectoryInfo directoryInfo = new DirectoryInfo(searchfolder);
             List<FileInfo> _result = new List<FileInfo>();
 
             if (!CheckDirectory(searchfolder))
                 return (List<FileInfo>)Enumerable.Empty<FileInfo>();
 
-            _result.AddRange((IEnumerable<FileInfo>)Directory.GetFiles(searchfolder, wildcardFilter).ToList());
+            _result.AddRange(directoryInfo.GetFiles().Where(file => file.FullName.ToUpper().Contains(wildcardFilter.ToUpper())));
 
             return _result;
         }
@@ -24,10 +25,10 @@ namespace GameHelper.Global
             if (!File.Exists(source.FullName))
                 return;
 
-            if (File.Exists(target + source.Name))
+            if (File.Exists(Path.Combine(target, source.Name)))
                 return;
 
-            File.Move(source.FullName, target + source.Name);
+            File.Move(source.FullName, Path.Combine(target, source.Name));
         }
 
         public static void DeleteFile(FileInfo file)

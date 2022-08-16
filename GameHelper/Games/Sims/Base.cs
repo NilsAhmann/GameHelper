@@ -39,7 +39,7 @@ namespace GameHelper.Games.Sims
         {
             foreach(var file in FileOperations.GetFileNamesByFilter(sourceFolder, _modFileFilter))
             {
-                FileOperations.DeleteFile(GetCompleteModFolder() + file.Name);
+                FileOperations.DeleteFile(Path.Combine(GetCompleteModFolder(), file.Name));
                 FileOperations.MoveFile(file, GetCompleteModFolder());
             }
         }
